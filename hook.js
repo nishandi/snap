@@ -60,8 +60,6 @@ async function run() {
     process.exit(0);
   }
 
-  const question = prompt.trimStart().replace(/^snap:\s*/i, "").trim();
-
   mkdirSync(require("path").dirname(SCREENSHOT_PATH), { recursive: true });
   try { unlinkSync(SCREENSHOT_PATH); } catch {}
 
@@ -71,9 +69,7 @@ async function run() {
     process.exit(0);
   }
 
-  const context = question
-    ? `The user just captured a screenshot saved at ${SCREENSHOT_PATH}. Read this image file first, then answer their question: ${question}`
-    : `The user just captured a screenshot saved at ${SCREENSHOT_PATH}. Read this image file and describe what you see — note anything broken, off, or worth calling out.`;
+  const context = `Screenshot saved at ${SCREENSHOT_PATH}. Read this image file before responding.`;
 
   process.stdout.write(JSON.stringify({
     hookSpecificOutput: {
