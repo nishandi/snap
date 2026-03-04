@@ -4,8 +4,6 @@
 
 ![snap: — let your AI see what you see, instantly](banners/1-terminal-noir.svg)
 
-![demo](demo.gif)
-
 Let your AI see what you see — instantly.
 
 ---
@@ -22,7 +20,9 @@ AI is changing that. `snap:` is a tool built by a non-engineer, for non-engineer
 
 ---
 
-## What it does
+## How it works
+
+![demo](demo.gif)
 
 How well snap works depends on how you use Claude. Here's the order from best to least seamless:
 
@@ -156,7 +156,7 @@ You should hear three dings, then chimes, and see a message saying the screensho
 
 ---
 
-## How it works (for the curious)
+## Under the hood
 
 `snap` is a tiny Node.js script with zero dependencies. It uses built-in Windows tools (PowerShell + Windows GDI) to capture the screen and copy it to your clipboard.
 
