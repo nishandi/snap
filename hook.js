@@ -13,7 +13,6 @@ function countdownAndSnap(outputPath) {
   const ps = `
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
-Add-Type -AssemblyName System.Media
 
 # Balloon notification — visible even when alt-tabbed to another window
 $notify = New-Object System.Windows.Forms.NotifyIcon
@@ -48,7 +47,7 @@ $notify.Dispose()
 
   const ps1path = join(homedir(), ".snap", "snap.ps1").replace(/\//g, "\\");
   writeFileSync(ps1path, ps);
-  execSync(`powershell -ExecutionPolicy Bypass -File "${ps1path}"`, { windowsHide: true });
+  execSync(`powershell -NoProfile -ExecutionPolicy Bypass -File "${ps1path}"`, { windowsHide: true });
 }
 
 async function run() {
