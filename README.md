@@ -4,6 +4,8 @@
 
 ![snap: — let your AI see what you see, instantly](banners/1-terminal-noir.svg)
 
+![demo](demo.gif)
+
 Let your AI see what you see — instantly.
 
 ---
