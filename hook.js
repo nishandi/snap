@@ -47,7 +47,7 @@ $notify.Dispose()
 
   const ps1path = join(homedir(), ".snap", "snap.ps1").replace(/\//g, "\\");
   writeFileSync(ps1path, ps);
-  execSync(`powershell -NoProfile -ExecutionPolicy Bypass -File "${ps1path}"`, { windowsHide: true });
+  execSync(`powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "${ps1path}"`);
 }
 
 async function run() {
