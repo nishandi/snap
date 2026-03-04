@@ -1,0 +1,10 @@
+{
+  "name": "snap",
+  "version": "1.0.0",
+  "description": "snap: — share your screen with your AI instantly",
+  "type": "module",
+  "bin": {
+    "snap": "./src/index.js"
+  },
+  "dependencies": {}
+}
