@@ -1,6 +1,8 @@
 # snap:
 
-Share your screen with your AI — instantly.
+![snap: — let your AI see what you see, instantly](banners/1-terminal-noir.svg)
+
+Let your AI see what you see — instantly.
 
 ---
 
