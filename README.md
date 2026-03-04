@@ -1,6 +1,5 @@
 # snap:
 
-[![npm](https://img.shields.io/npm/v/snap)](https://www.npmjs.com/package/snap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ![snap: — let your AI see what you see, instantly](banners/1-terminal-noir.svg)
