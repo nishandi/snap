@@ -65,6 +65,7 @@ async function run() {
 
   // Capture
   mkdirSync(SNAP_DIR, { recursive: true });
+  try { unlinkSync(LATEST_PATH); } catch {}
 
   try {
     captureToFile(LATEST_PATH);

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { readFileSync, writeFileSync } = require("fs");
+const { readFileSync, writeFileSync, unlinkSync, mkdirSync } = require("fs");
 const { join } = require("path");
 const { homedir } = require("os");
 const { execSync } = require("child_process");
@@ -61,6 +61,9 @@ async function run() {
   }
 
   const question = prompt.trimStart().replace(/^snap:\s*/i, "").trim();
+
+  mkdirSync(require("path").dirname(SCREENSHOT_PATH), { recursive: true });
+  try { unlinkSync(SCREENSHOT_PATH); } catch {}
 
   try {
     countdownAndSnap(SCREENSHOT_PATH);
