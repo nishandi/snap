@@ -148,6 +148,9 @@ You should hear three dings, then chimes, and see a message saying the screensho
 → Close VS Code completely and reopen it (not just reload the window).
 → Run `install.ps1` again — it's safe to run multiple times.
 
+**`snap:` stopped working mid-session (was working before)**
+→ Close and reopen your terminal or VS Code window. If the hook was updated while a session was already running, the session can end up in a stale state. A fresh start fixes it.
+
 **No sound or no notification**
 → Check your system volume isn't muted or at zero.
 
